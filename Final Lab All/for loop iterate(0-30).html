@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odd and Even Numbers</title>
+</head>
+<body>
+  <h1>Odd and Even Numbers</h1>
+  <label for="start">Start:</label>
+  <input type="number" id="start" min="0">
+  <label for="end">End:</label>
+  <input type="number" id="end" min="0">
+  <button onclick="displayNumbers()">Display Numbers</button>
+  <ul id="numberList"></ul>
+  <script>
+    function displayNumbers() {
+      const start = parseInt(document.getElementById('start').value);
+      const end = parseInt(document.getElementById('end').value);
+      const numberList = document.getElementById('numberList');
+      numberList.innerHTML = ''; // Clear previous content
+
+      if (start <= end) {
+        for (let i = start; i <= end; i++) {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${i} is ${i % 2 === 0 ? 'even' : 'odd'}`;
+          numberList.appendChild(listItem);
+        }
+      } else {
+        alert('Start value should be less than or equal to the End value.');
+      }
+    }
+  </script>
+</body>
+</html>

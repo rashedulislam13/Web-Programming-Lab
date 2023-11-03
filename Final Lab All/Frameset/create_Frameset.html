@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frameset Example</title>
+</head>
+<frameset cols="250,* *">
+    <!-- Left Vertical Frame -->
+    <frame name="left_vertical" src="left_vartical.html">
+    
+    <!-- Right Vertical Frameset (Further Divided) -->
+    <frameset rows="400,350">
+        <!-- Right Top Frame -->
+        <frame name="right_top" src="right_top.html">
+        
+        <!-- Right Bottom Frame -->
+        <frame name="right_bottom" src="right_bottom.html">
+    </frameset>
+    
+    <!-- This is a fallback content for browsers that don't support framesets -->
+    <noframes>
+        <body>
+        
+        </body>
+    </noframes>
+</frameset>
+</html>
+
